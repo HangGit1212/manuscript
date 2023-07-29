@@ -8,13 +8,6 @@ This manuscript's code is in the code folder, and the origin data is in the data
 - IVIFtry4.m
   Interval intuitionistic fuzzy number sorting
 - dynamicoperters.m
-
-- dynamicsorting.m
-
-- informationme.m
+  Interval intuitionistic fuzzy number sorting
 - informationxzs.m
-- meinformationre.m
-- powerme.m
-- qzsame2014.m
-- qzsresult.m
-- try4.m
+  Compute the interval intuitionistic fuzzy number sorting
