@@ -27,7 +27,6 @@ hold on
 % hold on
 
 % l1=legend('t1:weight')
-legend('t1时刻的排序为:A1>A4>A5>A2>A3>A7>A6','t2时刻的排序为:A1>A4>A2>A5>A3>A7>A6','t3时刻的排序为:A1>A4>A2>A5>A3>A7>A6','最后综合排序为:A1>A4>A2>A5>A3>A7>A6');
 % leg=legend(w1,'t1:weight',w2,'t2:weight',w3,'t3:weight',wt,'t:weight');
 % [legh,objh,outh,outm]=
 % set(leg,'Box','off');
@@ -46,8 +45,7 @@ legend('t1时刻的排序为:A1>A4>A5>A2>A3>A7>A6','t2时刻的排序为:A1>A4>A2>A5>A3>A7>A
 % set(legh3,'position',[0.6,0.8,0.1,0.1]);
 set(gca,'xtick',1:1:7);
 set(gca,'xticklabel',{'1','2','3','4','5','6','7'});
-xlabel('7个区域');
-ylabel('得分函数值');
+
 % title('the sorting of alternatives in different stage');
 % text(1.25,0.4,'o--t1-weight');
 % text(1.25,0.425,'*--t2-weight');
