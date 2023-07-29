@@ -1,20 +1,15 @@
-%区间直觉模糊数排序
-%
-%输入
-%输出
-%
 
 clear 
 clc   
 
 data=xlsread('information4.xlsx');
 
-G=5;      %属性数
-A=4;      %企业数
+G=5;     
+A=4;      
 % R=zeros(A*G,4);
 
-%赋值
-R=mat2cell(data,[1,1,1,1],[4,4,4,4,4]);%直接存成了cell型
+
+R=mat2cell(data,[1,1,1,1],[4,4,4,4,4]);
 
 D=zeros(A,A);
 sum_w=zeros(1,G);
@@ -47,8 +42,8 @@ sum_w=zeros(1,G);
 % end
 
 
-% sum_z=sum(sum_w);%总和
-% % 求权值
+% sum_z=sum(sum_w);
+%
 % w1=sum_w(1)/sum_z;
 % w2=sum_w(2)/sum_z;
 % w3=sum_w(3)/sum_z;
@@ -62,13 +57,13 @@ w=[0.16,0.1,0.26,0.16,0.32];
 
 %[m,n]=max(d);
 
-%储存成cell型
+%
 % for i=1:A
 %     for j=1:G
 %         R(i,j)={[data(i,4*(j-1)+1),data(i,4*(j-1)+2),data(i,4*(j-1)+3),data(i,4*(j-1)+4)]};
 %     end
 % end
-% R=mat2cell(data,[1,1,1,1,1],[4,4,4,4]);%直接存成了cell型
+% R=mat2cell(data,[1,1,1,1,1],[4,4,4,4]);
 
 
 
