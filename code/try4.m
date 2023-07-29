@@ -1,20 +1,15 @@
-%区间直觉模糊数排序
-%
-%输入
-%输出
-%
 
 clear 
 clc
 
-data=xlsread('数据集\data1\data1.xlsx');
+data=xlsread('鏁版嵁闆哱data1\data1.xlsx');
 
-G=4;      %属性数
-A=5;      %目标数
+G=4;      
+A=5;      
 % R=zeros(A*G,4);
 
-%赋值
-R=mat2cell(data,[1,1,1,1,1],[4,4,4,4]);%直接存成了cell型
+
+R=mat2cell(data,[1,1,1,1,1],[4,4,4,4]);
 
 D=zeros(A,A);
 sum_w=zeros(1,G);
@@ -23,7 +18,7 @@ for l=1:G
 %     D=zeros(A,A);
 %     sum_w=zeros(1,G);
 %     a1=0;a2=0;b1=0;b2=0;c1=0;c2=0;d1=0;d2=0;
-for i=1:A %上下加，然后将所有目标在所有属性下求出一个总的离差值，最大化。
+for i=1:A
     m=R{i,l};
     a1=m(1);
     b1=m(2);
@@ -43,8 +38,8 @@ for i=1:A %上下加，然后将所有目标在所有属性下求出一个总的离差值，最大化。
 end
 sum_w(l)=sum(sum(D));      
 end
-sum_z=sum(sum_w);%总和
-%求权值
+sum_z=sum(sum_w);
+
 w1=sum_w(1)/sum_z;
 w2=sum_w(2)/sum_z;
 w3=sum_w(3)/sum_z;
@@ -52,13 +47,12 @@ w4=sum_w(4)/sum_z;
 w=[w1,w2,w3,w4];
 %[m,n]=max(d);
 
-%储存成cell型
 % for i=1:A
 %     for j=1:G
 %         R(i,j)={[data(i,4*(j-1)+1),data(i,4*(j-1)+2),data(i,4*(j-1)+3),data(i,4*(j-1)+4)]};
 %     end
 % end
-% R=mat2cell(data,[1,1,1,1,1],[4,4,4,4]);%直接存成了cell型
+% R=mat2cell(data,[1,1,1,1,1],[4,4,4,4]);
 
 
 %sup
@@ -84,7 +78,7 @@ for i=1:G
     end
 end
 
-%%求静态集结值
+
 sum_sup=sum(D,2)';
 T=zeros(G,G);
 sum_e=zeros(1,G);
